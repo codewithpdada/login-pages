@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background Video Setup */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* Dark Contrast Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55));
+  z-index: -1;
+}
+
+/* Layout Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Glassmorphism Card Wrapper */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+}
+
+/* SSL Security Badge */
+.security-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #2ed573;
+  background: rgba(46, 213, 115, 0.12);
+  border: 1px solid rgba(46, 213, 115, 0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  margin: 0 auto 15px auto;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Typography & Brand Header */
+.brand-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.brand-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.brand-header h2 span {
+  color: #ff4757;
+}
+
+.brand-header p {
+  font-size: 0.85rem;
+  color: #d1d8e0;
+  margin-top: 4px;
+}
+
+/* Form Switch Buttons */
+.toggle-container {
+  display: flex;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 30px;
+  padding: 4px;
+  margin-bottom: 25px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.toggle-btn.active {
+  background: #ff4757;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+}
+
+/* Form Groups & Inputs */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group i.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a4b0be;
+  transition: color 0.3s ease;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 45px 14px 45px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #ff4757;
+  box-shadow: 0 0 10px rgba(255, 71, 87, 0.3);
+}
+
+.form-group input:focus ~ i.input-icon {
+  color: #ff4757;
+}
+
+.form-group .toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a4b0be;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.form-group .toggle-password:hover {
+  color: #ffffff;
+}
+
+/* Options (Checkboxes & Links) */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  color: #d1d8e0;
+}
+
+.form-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.form-options a {
+  color: #ff4757;
+  text-decoration: none;
+  margin-left: 2px;
+}
+
+.form-options a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Buttons */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: #ff4757;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-submit:hover {
+  background: #e03d4f;
+  transform: translateY(-2px);
+}
+
+/* Form Switch State Animations */
+.form-content {
+  display: none;
+}
+
+.form-content.active {
+  display: block;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
