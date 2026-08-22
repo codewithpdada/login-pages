@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseFit | Secure Access</title>
+  
+  <!-- External Resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- External Style Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Gym Video Background -->
+  <div class="video-background">
+    <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1517838277536-f5f99be501cd">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-man-holding-weights-in-a-gym-43308-large.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <!-- Dark Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Main Portal Card -->
+  <div class="container">
+    <div class="card">
+      
+      <!-- Security Badge -->
+      <div class="security-badge">
+        <i class="fa-solid fa-shield-halved"></i> 256-Bit SSL Encrypted
+      </div>
+
+      <!-- Brand Header -->
+      <div class="brand-header">
+        <h2>PULSE<span>FIT</span></h2>
+        <p>Push your limits. Secure your access.</p>
+      </div>
+
+      <!-- Mode Switcher -->
+      <div class="toggle-container">
+        <button type="button" class="toggle-btn active" id="signInTab">Sign In</button>
+        <button type="button" class="toggle-btn" id="signUpTab">Sign Up</button>
+      </div>
+
+      <!-- Sign In Form -->
+      <form id="signInForm" class="form-content active" novalidate>
+        <div class="form-group">
+          <input type="email" id="signin-email" placeholder="Email Address" required>
+          <i class="fa-solid fa-envelope input-icon"></i>
+        </div>
+        
+        <div class="form-group">
+          <input type="password" id="signin-password" placeholder="Password" required>
+          <i class="fa-solid fa-lock input-icon"></i>
+          <i class="fa-solid fa-eye toggle-password" data-target="signin-password"></i>
+        </div>
+        
+        <div class="form-options">
+          <label>
+            <input type="checkbox" id="remember-me"> Remember me
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="btn-submit">
+          Sign In <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <!-- Sign Up Form -->
+      <form id="signUpForm" class="form-content" novalidate>
+        <div class="form-group">
+          <input type="text" id="signup-name" placeholder="Full Name" required>
+          <i class="fa-solid fa-user input-icon"></i>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="signup-email" placeholder="Email Address" required>
+          <i class="fa-solid fa-envelope input-icon"></i>
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="signup-password" placeholder="Create Password" minlength="8" required>
+          <i class="fa-solid fa-lock input-icon"></i>
+          <i class="fa-solid fa-eye toggle-password" data-target="signup-password"></i>
+        </div>
+
+        <div class="form-options">
+          <label>
+            <input type="checkbox" id="agree-terms" required> I agree to the <a href="#">Terms & Privacy</a>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          Create Account <i class="fa-solid fa-user-plus"></i>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- External JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
