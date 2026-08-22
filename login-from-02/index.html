@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Portal - Secure Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <div>
+          <h2>Welcome Back</h2>
+          <p class="subtitle">Log in to access your gym account</p>
+        </div>
+        <div class="logo" aria-label="Gym Logo">
+          <svg viewBox="0 0 24 24" width="40" height="40">
+            <path fill="#00B07B" d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14 4.14 5.57 2 7.71 3.43 9.14 2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22 14.86 20.57 16.29 22 18.43 19.86 19.86 18.43 18.43 19.86 16.29 22 14.86 20.57z"/>
+          </svg>
+        </div>
+      </div>
+
+      <form id="login-form" novalidate>
+        <div id="error-message" class="error-banner" role="alert" aria-live="assertive"></div>
+
+        <div class="form-group">
+          <label for="username">Username or Email</label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            placeholder="e.g. alex@example.com" 
+            autocomplete="username" 
+            required>
+        </div>
+
+        <div class="form-group">
+          <div class="label-row">
+            <label for="password">Password</label>
+            <a href="#" id="reset-link" class="reset-link">Forgot?</a>
+          </div>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            placeholder="••••••••" 
+            autocomplete="current-password" 
+            required>
+        </div>
+
+        <button type="submit" id="login-button">
+          <span class="btn-text">Sign In</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
